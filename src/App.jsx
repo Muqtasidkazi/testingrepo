@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import "./App.css";
+import Pdfconvertor from "./components/Pdfconvertor";
 
 function App() {
   const [elmts] = useState([
@@ -35,13 +36,13 @@ function App() {
 
   function handleLeftArrow() {
     if (sliderRef.current) {
-      sliderRef.current.scrollLeft -=234; // Adjust scroll value as needed
+      sliderRef.current.scrollLeft -=sliderRef.current.clientWidth; // Adjust scroll value as needed
     }
   }
 
   function handleRightArrow() {
     if (sliderRef.current) {
-      sliderRef.current.scrollLeft +=234; // Adjust scroll value as needed
+      sliderRef.current.scrollLeft +=sliderRef.current.clientWidth; // Adjust scroll value as needed
     }
   }
 
@@ -60,6 +61,8 @@ function App() {
       <button className="btn" onClick={handleRightArrow}>
         right
       </button>
+
+      <Pdfconvertor/>
     </div>
   );
 }

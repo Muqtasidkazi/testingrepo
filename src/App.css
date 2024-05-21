@@ -1,38 +1,32 @@
+/* App.css */
 .slider-body {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow-x: hidden;
 }
 
 .slider-container {
   display: flex;
   overflow: hidden;
-  width: 30%;
-  scroll-behavior: smooth;
+  width: 480px; /* Adjust based on the width of your slider items */
 }
 
 .slider-item {
-  min-width: 192px; /* Adjust as needed */
-  margin: 0 5px;
-  padding: 20px;
-  background-color: #f0f0f0;
+  flex: 0 0 50%; /* Each item takes 50% of the slider container width */
+  box-sizing: border-box;
+  padding: 10px;
   text-align: center;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: transform 0.3s ease;
+  background-color: #f9f9f9;
 }
 
 .btn {
-  margin: 0 10px;
   padding: 10px;
+  margin: 0 10px;
   background-color: #007bff;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
